@@ -7,8 +7,6 @@ namespace Hash_Table
         static void Main(string[] args)
         {
             Console.WriteLine("WelCome to hash table");
-            
-
             int key = 0;
             string sampleParagraph = "Paranoids are not paranoid because they are paranoid but because they keep putting themselves deliberately into paranoid avoidable situations";
             string[] paragraph = sampleParagraph.Split(" ");
@@ -18,11 +16,14 @@ namespace Hash_Table
                 hash.Add(key, word);
                 key++;
             }
+            hash.Remove(17);
+
             for (key = 0; key < paragraph.Length; key++)
             {
                 string value = hash.Get(key);
                 Console.WriteLine($"frequency of word '{value}' is {key}");
             }
+            hash.Remove(17);
         }
     }
 
